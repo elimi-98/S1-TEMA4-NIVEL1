@@ -3,22 +3,22 @@
 class Employee{
 
     //Atributs
-    public $nom;
-    public $sou;
+    protected $nom = "";
+    protected $sou = 0;
  
 
     //Mètodes propis
-    function initialize($nom, $sou){
-        $this->nom = $nom;
-        $this->sou = $sou; 
+    public function initialize($nom, $sou){
+        $this -> nom = $nom;
+        $this -> sou = $sou; 
     }
 
-    function print(){
+    public function print(){
         echo 'Nombre: ' . $this->nom . '<br/>'; 
 
         if($this->sou >= 6000){
             echo 'Ha de pagar impostos.';
-        }else if($this->sou < 6000){
+        }else if ($this->sou < 6000){
             echo 'No ha de pagar impostos.'; 
         }
     }
