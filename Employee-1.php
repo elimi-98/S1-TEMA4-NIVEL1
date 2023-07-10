@@ -13,17 +13,16 @@ class Employee{
         $this -> sou = $sou; 
     }
 
-    public function print(){
+    public function imprimir(){
         echo 'Nombre: ' . $this->nom . '<br/>'; 
 
-        if($this->sou >= 6000){
+        if($this->sou > 6000){
             echo 'Ha de pagar impostos.';
-        }else if ($this->sou < 6000){
+        }else if ($this->sou <= 6000){
             echo 'No ha de pagar impostos.'; 
-        }
+        } 
     }
 
 }
-
 
 ?>
